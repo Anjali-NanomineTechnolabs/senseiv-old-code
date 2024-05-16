@@ -1,0 +1,16 @@
+.blinking-value {
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    color: black;
+    padding: 20px;
+}
+
+.green-blinking {
+    color: #22ab94;
+}
+
+.red-blinking {
+    color: #f23645
+}

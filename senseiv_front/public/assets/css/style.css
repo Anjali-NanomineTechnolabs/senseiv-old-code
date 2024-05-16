@@ -1,0 +1,549 @@
+/*
+  1. Base CSS
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white-color: #ffffff;
+    --black-color: #000000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*
+  2. Login Section CSS
+*/
+
+.login_section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--white-color);
+    background-color: #f9fcff;
+    background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
+}
+
+.login_section .logo a {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--black-color);
+}
+
+.login_section .card {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.login_section .card .card-body {
+    padding: 45px 25px;
+}
+
+.login_section .card .card-body .top_text h5 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #111827;
+}
+
+.login_section .card .card-body .top_text p {
+    font-size: 13px;
+    font-weight: 400;
+    color: #74788d;
+}
+
+.login_section .card .card-body form .form-group label {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.login_section .card .card-body form .form-group .form-control {
+    font-size: 13px;
+    padding: 8px 15px;
+}
+
+.login_section .card .card-body form .form-group .form-control:focus,
+.login_section .card .card-body form .form-check .form-check-input:focus {
+    box-shadow: none;
+    border-color: #dee2e6;
+}
+
+.login_section .card .card-body form .form-group .forgot_text a,
+.login_section .card .card-body form .form-check .form-check-label {
+    font-size: 13px;
+}
+
+.login_section .card .card-body form .btn {
+    font-size: 13px;
+    color: var(--white-color);
+    background-color: #111827;
+}
+
+.login_section .card .card-body form .btn svg {
+    width: 16px;
+    margin-right: 5px;
+}
+
+.login_section .copyright p {
+    font-size: 13px;
+    color: var(--black-color);
+}
+
+/*
+  3. Header CSS
+*/
+
+.header {
+    background-color: #111827;
+    padding: 5px 0;
+}
+
+.header .navbar .navbar-brand {
+    font-size: 30px;
+    color: var(--white-color);
+}
+
+.header .navbar .navbar-toggler {
+    padding: 0;
+    color: var(--white-color);
+    border: none;
+}
+
+.header .navbar .navbar-toggler:focus,
+.header .navbar .offcanvas .offcanvas-header .btn-close:focus {
+    box-shadow: none;
+}
+
+.header .navbar .offcanvas {
+    border: none;
+}
+
+.header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item {
+    margin: 0 13px;
+}
+
+.header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item .nav-link {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--white-color);
+}
+
+.header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item .nav-link.active {
+    color: #111827;
+    background-color: var(--white-color);
+    border-radius: 2px;
+}
+
+/* Media Query */
+
+@media (max-width: 991px) {
+    .header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item .nav-link {
+        color: var(--black-color);
+    }
+}
+
+/*
+  4. User Section CSS
+*/
+
+#addUser .modal-dialog .modal-content .modal-header,
+#editUser .modal-dialog .modal-content .modal-header,
+#deleteUser .modal-dialog .modal-content .modal-header {
+    padding: 5px;
+    border: none;
+}
+
+#addUser .modal-dialog .modal-content .modal-header button,
+#editUser .modal-dialog .modal-content .modal-header button,
+#deleteUser .modal-dialog .modal-content .modal-header button {
+    font-size: 14px;
+    font-weight: 500;
+    color: #CCCCCC;
+    border: none;
+    background: transparent;
+}
+
+#addUser .modal-dialog .modal-content .modal-body,
+#editUser .modal-dialog .modal-content .modal-body {
+    padding: 0 20px;
+}
+
+#deleteUser .modal-dialog .modal-content .modal-body {
+    padding: 20px;
+}
+
+#addUser .modal-dialog .modal-content .modal-body .top_text h3,
+#editUser .modal-dialog .modal-content .modal-body .top_text h3,
+#deleteUser .modal-dialog .modal-content .modal-body .top_text h3 {
+    font-size: 25px;
+    font-weight: 500;
+    color: #929292;
+}
+
+#deleteUser .modal-dialog .modal-content .modal-body .top_text p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #74788d;
+}
+
+#deleteUser .modal-dialog .modal-content .modal-body .top_text .button_area button {
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    background-color: #e5e5e5;
+    padding: 8px 20px;
+    margin: 0 10px;
+}
+
+#deleteUser .modal-dialog .modal-content .modal-body .top_text .button_area button:last-child {
+    background-color: red;
+    color: var(--white-color);
+}
+
+#addUser .modal-dialog .modal-content .modal-body form .form-group label,
+#editUser .modal-dialog .modal-content .modal-body form .form-group label {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#addUser .modal-dialog .modal-content .modal-body form .form-group .form-control,
+#editUser .modal-dialog .modal-content .modal-body form .form-group .form-control {
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 0;
+    color: #313131;
+}
+
+#addUser .modal-dialog .modal-content .modal-body form .form-group .form-control:focus,
+#editUser .modal-dialog .modal-content .modal-body form .form-group .form-control:focus {
+    box-shadow: none;
+    border-color: #dee2e6;
+}
+
+#addUser .modal-dialog .modal-content .modal-body form .form-group button,
+#editUser .modal-dialog .modal-content .modal-body form .form-group button {
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    background-color: #e5e5e5;
+    padding: 8px 20px;
+    margin-right: 20px;
+}
+
+#addUser .modal-dialog .modal-content .modal-body form .form-group button:last-child,
+#editUser .modal-dialog .modal-content .modal-body form .form-group button:last-child {
+    background-color: #111827;
+    color: var(--white-color);
+}
+
+/*
+  5. Alert Section CSS
+*/
+
+.alert_section .alert_area {
+    border-radius: 10px;
+    padding: 30px 20px;
+}
+
+.alert_section .alert_area .top_text h4 {
+    font-size: 23px;
+    font-weight: 500;
+    color: var(--black-color);
+    text-transform: uppercase;
+    letter-spacing: -0.8px;
+    margin-bottom: 5px;
+}
+
+.alert_section .alert_area .top_text p {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--black-color);
+    text-transform: uppercase;
+    letter-spacing: -0.8px;
+}
+
+.alert_section .alert_area .alert_box_area {
+    padding: 20px;
+}
+
+.alert_section .alert_area .alert_box_area .top_area {
+    background-color: #00001A;
+    padding: 20px;
+    border-radius: 15px 15px 0 0;
+}
+
+.alert_section .alert_area .alert_box_area .alert_box {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.alert_section .alert_area .alert_box_area .alert_box .top_area p {
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--white-color);
+    margin: 0;
+}
+
+.alert_section .alert_area .alert_box_area .alert_box .bottom_area {
+    padding: 20px;
+    border-radius: 0 0 15px 15px;
+}
+
+.alert_section .alert_area .alert_box_area .alert_box .bottom_area h6 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #344767;
+    text-transform: uppercase;
+}
+
+.alert_section .alert_area .alert_box_area .alert_box .bottom_area h5 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #344767;
+    text-transform: uppercase;
+}
+
+.alert_section .alert_area .alert_box_area .alert_box .bottom_area h5:last-child {
+    text-transform: capitalize;
+}
+
+/* Media Query  */
+
+@media (max-width: 991px) {
+    .alert_section .alert_area .alert_box_area {
+        padding: 0px;
+    }
+
+    .alert_section .alert_area .alert_box_area .top_area,
+    .alert_section .alert_area .alert_box_area .alert_box .bottom_area {
+        padding: 15px;
+    }
+
+    .alert_section .alert_area .alert_box_area .alert_box .bottom_area h6 {
+        font-size: 16px;
+    }
+
+    .alert_section .alert_area .alert_box_area .alert_box .bottom_area h5 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 575px) {
+    .alert_section .alert_area {
+        padding: 20px 15px;
+    }
+}
+
+/*
+  6. Dashboard Section CSS
+*/
+
+.dashboard_section {
+    padding: 30px 10px;
+}
+
+.dashboard_section .dashboard_area {
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #cccccc;
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 1), 0 1px 1px rgba(0, 0, 0, 1);*/
+}
+
+.dashboard_section .no_data_area p {
+    font-size: 30px;
+    font-weight: 500;
+    color: #67748E;
+    padding: 30px 0;
+}
+
+.dashboard_section .dashboard_area .top_text_area .add_btn, .btn-primary {
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    background-color: #e5e5e5;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.dashboard_section .dashboard_area .top_text_area {
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+.dashboard_section .dashboard_area .top_text_area h5 {
+    font-size: 20px;
+}
+
+.dashboard_section .dashboard_area table tr {
+    text-align: center;
+}
+
+.dashboard_section .dashboard_area table thead tr th {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--white-color);
+    text-transform: uppercase;
+    background-color: #111827;
+}
+
+.dashboard_section .dashboard_area table tbody tr td {
+    font-size: 14px;
+    font-weight: 400;
+    color: #67748E;
+    padding: 10px 0;
+}
+
+.dashboard_section .table tbody tr td .update_btn,
+.dashboard_section .table tbody tr td .delete_btn {
+    background: transparent;
+    border: none;
+    margin: 0 12px;
+}
+
+.dashboard_section .table tbody tr td .update_btn {
+    color: red;
+}
+
+.dashboard_section .table tbody tr td .delete_btn {
+    color: #ffc71f;
+}
+
+/* Media Query  */
+
+@media (max-width: 1399px) {
+    .dashboard_section .dashboard_area table tbody tr td {
+        min-width: 130px;
+    }
+}
+
+@media (max-width: 575px) {
+    .dashboard_section {
+        padding: 15px 0;
+    }
+
+    .dashboard_section .dashboard_area .top_text_area {
+        padding: 15px;
+    }
+
+    .dashboard_section .dashboard_area .top_text_area h5 {
+        font-size: 16px;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+/*
+  7. Vol Alert Section CSS
+*/
+
+.vol_alert_section {
+    padding: 30px 10px;
+}
+
+.vol_alert_section .vol_alert_area {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.vol_alert_section .vol_alert_area .top_area {
+    padding: 15px;
+}
+
+.vol_alert_section .vol_alert_area .top_area .top_text p {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.vol_alert_section .vol_alert_area .top_area .top_box .top_box_area {
+    border-radius: 15px;
+    background: #FAEBD7;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.vol_alert_section .vol_alert_area .top_area .top_box .top_box_area h6 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #67748E;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.vol_alert_section .vol_alert_area .top_area .top_box .top_box_area h5 {
+    font-size: 17px;
+    color: var(--black-color);
+    margin-bottom: 20px;
+}
+
+.vol_alert_section .vol_alert_area .top_area .top_box .top_box_area p {
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.vol_alert_section .vol_alert_area .top_area .top_box .top_box_area p:last-child {
+    color: #1F1DAD;
+}
+
+.vol_alert_section .vol_alert_area table thead tr th {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--white-color);
+    text-transform: uppercase;
+    background-color: #111827;
+}
+
+.vol_alert_section .vol_alert_area table tbody tr td {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--black-color);
+    padding: 10px;
+}
+
+/* Media Query  */
+
+@media (max-width: 575px) {
+    .vol_alert_section .vol_alert_area table tbody tr td {
+        min-width: 180px;
+    }
+
+    .vol_alert_section .vol_alert_area .top_area .top_text p {
+        font-size: 16px;
+    }
+
+    .vol_alert_section {
+        padding: 15px 0px;
+    }
+}
+
+/*Triggers*/
+
+.triggers_dashboard {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.triggers_dashboard:hover {
+    transform: scale(1.02);
+}
